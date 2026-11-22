@@ -154,6 +154,10 @@ footer{margin-top:56px;padding-top:14px;border-top:1px solid var(--rule);font-fa
 #docs td.meta{font-size:12px;color:var(--mute)}
 #docs tr[hidden]{display:none}
 .count{font-family:var(--mono);font-size:12px;color:var(--mute);margin:0 0 8px}
+.mapwrap{position:relative}
+.mapwrap iframe{pointer-events:none;display:block}
+.mapopen{position:absolute;right:12px;top:12px;z-index:2;font-family:var(--mono);font-size:13px;padding:8px 12px;border-radius:8px;background:var(--fg);color:var(--paper);text-decoration:none;box-shadow:0 1px 6px rgba(0,0,0,.25)}
+@media (max-width:600px){.extent iframe{height:340px}}
 </style></head><body><main>
 <header>
   <div class="eyebrow">San José Municipal Code · Title 20 · §20.55.203</div>
@@ -184,8 +188,8 @@ footer{margin-top:56px;padding-top:14px;border-top:1px solid var(--rule);font-fa
 <div class="scroll"><table class="idx" id="drafttbl"></table></div>
 
 <h2 id="extent">Where Table 20-138 governs</h2>
-<div class="extent"><iframe id="mapframe" src="docs/map.html" title="Map of the six Table 20-138 zoning districts" loading="lazy"></iframe>
-<div class="cap">811 polygons, about 1,750 acres, in six districts. Toggle for MUC only. <a href="docs/map.html" target="_blank" rel="noopener">Open full screen</a>.</div></div>
+<div class="extent"><div class="mapwrap"><iframe id="mapframe" src="docs/map.html#preview" title="Map of the six Table 20-138 zoning districts" loading="lazy" tabindex="-1"></iframe><a class="mapopen" href="docs/map.html" target="_blank" rel="noopener">Open the map ↗</a></div>
+<div class="cap">811 polygons, about 1,750 acres, in six districts. Preview only — open the map to pan, zoom, and toggle MUC.</div></div>
 
 <h2 id="definitions">Definitions, Chapter 20.200</h2>
 <div class="defs" id="defs"></div>

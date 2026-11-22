@@ -34,5 +34,5 @@ var layer=L.geoJSON(data,{style:function(f){return {color:COL[f.properties.z],we
 var pin=L.circleMarker([37.3492,-121.8767],{radius:7,color:'#000',weight:2,fillColor:'#fff',fillOpacity:1}).addTo(m).bindPopup('<b>309 N. 17th St.</b><br>MUC — Lighthouse Food Rescue &amp; Distribution');
 function setMode(v){layer.eachLayer(function(l){var z=l.feature.properties.z; var on=(v==='all')||(z==='MUC'); l.setStyle({fillOpacity:on?.45:0.04,opacity:on?1:0.15});});}
 document.querySelectorAll('input[name=mode]').forEach(function(r){r.addEventListener('change',function(){setMode(r.value)})});
-try{ if(location.hash==='#muc'){document.querySelector('input[value=muc]').checked=true;setMode('muc');} }catch(e){}
+try{ if(location.hash==='#muc'){document.querySelector('input[value=muc]').checked=true;setMode('muc');} if(location.hash==='#preview'){document.querySelector('.panel').style.display='none';m.zoomControl.remove();m.dragging.disable();m.scrollWheelZoom.disable();m.touchZoom.disable();m.doubleClickZoom.disable();} }catch(e){}
 </script></body></html>
