@@ -144,9 +144,11 @@ footer{margin-top:56px;padding-top:14px;border-top:1px solid var(--rule);font-fa
 :root:not([data-theme="light"]) .kind.certified{background:#2b4a7e;color:#d9e6f5}
 .verlink{font-size:11px;font-weight:400}
 
-.nav{display:flex;gap:18px;margin:10px 0 0;font-family:var(--mono);font-size:13px}
-.nav a{color:var(--mute);text-decoration:none;border-bottom:2px solid transparent;padding-bottom:2px}
-.nav a.on{color:var(--fg);border-bottom-color:var(--fg)}
+.nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:22px 0 6px;font-family:var(--mono);font-size:14px}
+.nav a{color:var(--fg);text-decoration:none;padding:9px 18px;border:1.5px solid var(--fg);border-radius:8px;background:var(--paper);min-width:120px;text-align:center;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.nav a:hover{background:var(--fg);color:var(--paper)}
+.nav a.on{background:var(--fg);color:var(--paper)}
+@media (max-width:600px){.nav a{min-width:0;flex:1 1 40%;padding:10px 8px}}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px}
 .chips button{font-family:var(--mono);font-size:12px;padding:5px 10px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--fg);cursor:pointer}
 .chips button.on{background:var(--fg);color:var(--paper);border-color:var(--fg)}
@@ -197,7 +199,7 @@ footer{margin-top:56px;padding-top:14px;border-top:1px solid var(--rule);font-fa
 <div class="procs" id="procs"></div>
 
 <h2 id="extent">Where Table 20-138 governs</h2>
-<div class="extent"><div class="mapwrap"><iframe id="mapframe" src="../docs/map.html?v=1795382847#preview" title="Map of the six Table 20-138 zoning districts" loading="lazy" tabindex="-1"></iframe><a class="mapopen" href="../docs/map.html" target="_blank" rel="noopener">Open the map ↗</a></div>
+<div class="extent"><div class="mapwrap"><iframe id="mapframe" src="../docs/map.html?v=1795386330#preview" title="Map of the six Table 20-138 zoning districts" loading="lazy" tabindex="-1"></iframe><a class="mapopen" href="../docs/map.html" target="_blank" rel="noopener">Open the map ↗</a></div>
 <div class="cap">811 polygons, about 1,750 acres, in six districts. Preview only — open the map to pan, zoom, and toggle MUC.</div></div>
 
 <h2 id="definitions">Definitions, Chapter 20.200</h2>
