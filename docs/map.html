@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Table 20-138 districts — extent</title>
+<title>Table 20-138 districts - extent</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <style>
 html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
@@ -20,8 +20,8 @@ html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Robo
 <div class="panel">
 <h1>Where Table 20-138 governs</h1>
 <div class="tog"><label><input type="radio" name="mode" value="muc" checked> MUC only (309 N. 17th St.)</label><label><input type="radio" name="mode" value="all"> All six districts</label></div>
-<div class="lg"><span class="sw" style="background:#7b2d8b"></span><b>UVC</b> Urban Village Commercial — 32 polygons, 83 ac</div><div class="lg"><span class="sw" style="background:#b54fcf"></span><b>UV</b> Urban Village — 103 polygons, 246 ac</div><div class="lg"><span class="sw" style="background:#ff1f8f"></span><b>MUC</b> Mixed Use Commercial — 144 polygons, 138 ac</div><div class="lg"><span class="sw" style="background:#e2902a"></span><b>MUN</b> Mixed Use Neighborhood — 293 polygons, 680 ac</div><div class="lg"><span class="sw" style="background:#1f6fb5"></span><b>UR</b> Urban Residential — 192 polygons, 539 ac</div><div class="lg"><span class="sw" style="background:#1f9e8a"></span><b>TR</b> Transit Residential — 47 polygons, 59 ac</div>
-<div class="tot"><b>Total: 811 polygons, about 1,747 acres</b> — every one lost the "Social service agency" and "Printing and publishing" rows on July 19, 2024.</div>
+<div class="lg"><span class="sw" style="background:#7b2d8b"></span><b>UVC</b> Urban Village Commercial - 32 polygons, 83 ac</div><div class="lg"><span class="sw" style="background:#b54fcf"></span><b>UV</b> Urban Village - 103 polygons, 246 ac</div><div class="lg"><span class="sw" style="background:#ff1f8f"></span><b>MUC</b> Mixed Use Commercial - 144 polygons, 138 ac</div><div class="lg"><span class="sw" style="background:#e2902a"></span><b>MUN</b> Mixed Use Neighborhood - 293 polygons, 680 ac</div><div class="lg"><span class="sw" style="background:#1f6fb5"></span><b>UR</b> Urban Residential - 192 polygons, 539 ac</div><div class="lg"><span class="sw" style="background:#1f9e8a"></span><b>TR</b> Transit Residential - 47 polygons, 59 ac</div>
+<div class="tot"><b>Total: 811 polygons, about 1,747 acres</b> - every one lost the "Social service agency" and "Printing and publishing" rows on July 19, 2024.</div>
 <div class="note">Source: City of San José GIS, Zoning_District layer (captured Oct. 28, 2026), filtered to the six districts of §20.55.203; geometry simplified ~2 m for display. Click a polygon for its district, rezoning file and acreage.</div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -31,8 +31,8 @@ var data={"type":"FeatureCollection","features":[{"type":"Feature","properties":
 var m=L.map('map',{zoomControl:true}).setView([37.33,-121.88],12);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(m);
 var layer=L.geoJSON(data,{style:function(f){return {color:COL[f.properties.z],weight:1,fillColor:COL[f.properties.z],fillOpacity:.55}},
- onEachFeature:function(f,l){var p=f.properties;l.bindPopup('<b>'+p.z+'</b> — '+NAMES[p.z]+'<br>'+(p.file?'Rezoning file '+p.file+'<br>':'')+(p.date?'Approved '+p.date+'<br>':'')+p.ac+' acres')}}).addTo(m);
-var pin=L.circleMarker([37.3483267,-121.8779337],{radius:7,color:'#000',weight:2,fillColor:'#fff',fillOpacity:1}).addTo(m).bindPopup('<b>309 N. 17th St.</b><br>MUC — Lighthouse Food Rescue &amp; Distribution');
+ onEachFeature:function(f,l){var p=f.properties;l.bindPopup('<b>'+p.z+'</b> - '+NAMES[p.z]+'<br>'+(p.file?'Rezoning file '+p.file+'<br>':'')+(p.date?'Approved '+p.date+'<br>':'')+p.ac+' acres')}}).addTo(m);
+var pin=L.circleMarker([37.3483267,-121.8779337],{radius:7,color:'#000',weight:2,fillColor:'#fff',fillOpacity:1}).addTo(m).bindPopup('<b>309 N. 17th St.</b><br>MUC - Lighthouse Food Rescue &amp; Distribution');
 function setMode(v){layer.eachLayer(function(l){var z=l.feature.properties.z; var on=(v==='all')||(z==='MUC'); l.setStyle({fillOpacity:on?.55:0.05,opacity:on?1:0.15});});}
 document.querySelectorAll('input[name=mode]').forEach(function(r){r.addEventListener('change',function(){setMode(r.value)})});
 setMode('muc');
