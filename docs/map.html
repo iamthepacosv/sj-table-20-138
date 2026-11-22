@@ -32,7 +32,7 @@ var m=L.map('map',{zoomControl:true}).setView([37.33,-121.88],12);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(m);
 var layer=L.geoJSON(data,{style:function(f){return {color:COL[f.properties.z],weight:1,fillColor:COL[f.properties.z],fillOpacity:.55}},
  onEachFeature:function(f,l){var p=f.properties;l.bindPopup('<b>'+p.z+'</b> — '+NAMES[p.z]+'<br>'+(p.file?'Rezoning file '+p.file+'<br>':'')+(p.date?'Approved '+p.date+'<br>':'')+p.ac+' acres')}}).addTo(m);
-var pin=L.circleMarker([37.3487,-121.8791],{radius:7,color:'#000',weight:2,fillColor:'#fff',fillOpacity:1}).addTo(m).bindPopup('<b>309 N. 17th St.</b><br>MUC — Lighthouse Food Rescue &amp; Distribution');
+var pin=L.circleMarker([37.3483267,-121.8779337],{radius:7,color:'#000',weight:2,fillColor:'#fff',fillOpacity:1}).addTo(m).bindPopup('<b>309 N. 17th St.</b><br>MUC — Lighthouse Food Rescue &amp; Distribution');
 function setMode(v){layer.eachLayer(function(l){var z=l.feature.properties.z; var on=(v==='all')||(z==='MUC'); l.setStyle({fillOpacity:on?.55:0.05,opacity:on?1:0.15});});}
 document.querySelectorAll('input[name=mode]').forEach(function(r){r.addEventListener('change',function(){setMode(r.value)})});
 setMode('muc');
