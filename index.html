@@ -114,7 +114,9 @@ select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .def .in{font-family:var(--mono);font-size:12.5px}
 .def .in b{color:var(--accent)}
 /* Index */
+.idx{min-width:760px}
 .idx td{overflow-wrap:anywhere}
+.idx td:first-child{min-width:260px}
 .idx td.h{font-size:11.5px;color:var(--mute)}
 .idx .ordtitle{font-family:var(--serif);font-size:14px;max-width:56ch}
 /* Not found */
@@ -146,7 +148,7 @@ footer{margin-top:56px;padding-top:14px;border-top:1px solid var(--rule);font-fa
 .verlink{font-size:11px;font-weight:400}
 
 .search{max-width:560px;margin:0 auto 4px;position:relative}
-.search input{width:100%;box-sizing:border-box;font-family:var(--mono);font-size:14px;padding:9px 12px;border:1.5px solid var(--line);border-radius:8px;background:var(--paper);color:var(--fg)}
+.search input{-webkit-appearance:none;appearance:none;width:100%;box-sizing:border-box;font-family:var(--mono);font-size:14px;padding:9px 12px;border:1.5px solid var(--line);border-radius:8px;background:var(--paper);color:var(--fg)}
 .search input:focus{outline:none;border-color:var(--fg)}
 #hits{position:absolute;left:0;right:0;top:100%;z-index:20;background:var(--paper);border:1.5px solid var(--fg);border-radius:8px;margin-top:4px;max-height:60vh;overflow:auto;box-shadow:0 6px 18px rgba(0,0,0,.18);text-align:left}
 #hits[hidden]{display:none}
@@ -158,6 +160,7 @@ footer{margin-top:56px;padding-top:14px;border-top:1px solid var(--rule);font-fa
 #hits small{display:block;color:var(--mute);font-size:12.5px;margin-top:2px}
 .hit{outline:2px solid var(--accent);outline-offset:6px;border-radius:4px}
 .tl li.hit{outline:none} .tl li.hit .body>details{outline:2px solid var(--accent);outline-offset:8px;border-radius:4px}
+header{position:relative;z-index:30}
 
 .nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:30px 0 14px;font-family:var(--mono);font-size:14px}
 .nav a{color:var(--fg);text-decoration:none;padding:9px 18px;border:1.5px solid var(--fg);border-radius:8px;background:var(--paper);min-width:120px;text-align:center;box-shadow:0 1px 2px rgba(0,0,0,.08)}
