@@ -170,6 +170,8 @@ header{position:relative;z-index:30}
 .nav a.on{background:var(--fg);color:var(--paper)}
 @media (max-width:600px){.nav a{min-width:0;flex:1 1 40%;padding:10px 8px}}
 header+h2{margin-top:16px}
+.nav.cur{margin:38px 0 10px}
+.nav.cur a{min-width:0}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px}
 .chips button{font-family:var(--mono);font-size:12px;padding:5px 10px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--fg);cursor:pointer}
 .chips button.on{background:var(--fg);color:var(--paper);border-color:var(--fg)}
@@ -199,6 +201,7 @@ header+h2{margin-top:16px}
   <div class="meta">City documents only. Built <span id="built"></span>. Not legal advice.</div>
   <nav class="nav"><a href="index.html" class="on">Record</a><a href="meetings.html">Meetings</a><a href="documents.html">Documents</a><a href="docs/map.html" target="_blank" rel="noopener">Map</a></nav>
   <div class="search"><input id="q" type="search" placeholder="Search the record - a word, a date, an ordinance number" autocomplete="off" aria-label="Search the record"><div id="hits" hidden></div></div>
+  <nav class="nav cur"><a href="https://library.municode.com/ca/san_jose/codes/code_of_ordinances?nodeId=TIT20ZO_CH20.55URVIMIUSZODI_PT3USAL_20.55.203URVIMIUSZODIUSRE" target="_blank" rel="noopener">Table 20-138 as published today (Municode) ↗</a></nav>
 </header>
 
 <h2 id="timeline">Timeline</h2>
